@@ -75,8 +75,8 @@ const notam = computed(() => {
 });
 
 function loadNotam() {
-  //   fetch(`${windyUrl}/${props.id}`)
-  fetch("notam_RCTP.json")
+  fetch(`${windyUrl}/${props.id}`)
+    // fetch("notam_RCTP.json")
     .then((res) => {
       if (res.ok) {
         return res.json();

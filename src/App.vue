@@ -38,8 +38,8 @@ function getAirportDataById(id, data) {
 
 onMounted(() => {
   fetch(
-    // "https://ptx.transportdata.tw/MOTC/v2/Air/METAR/Airport?$top=30&$format=JSON"
-    "data.json"
+    "https://ptx.transportdata.tw/MOTC/v2/Air/METAR/Airport?$top=30&$format=JSON"
+    // "data.json"
   )
     .then((res) => {
       if (res.ok) {
