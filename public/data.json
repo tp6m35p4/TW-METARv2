@@ -1,0 +1,313 @@
+[
+  {
+    "AirportID": "LZN",
+    "StationID": "RCFG",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "南竿", "En": "Nangan" },
+    "AirportName": { "Zh_tw": "南竿機場", "En": "Nangan Airport" },
+    "StationPosition": {
+      "PositionLon": 119.957,
+      "PositionLat": 26.1606,
+      "GeoHash": "wstkcdqh8"
+    },
+    "ObservationTime": "2022-07-13T19:00:00+08:00",
+    "MetarText": "METAR RCFG 131100Z 18002KT 9999 FEW012 27/26 Q1005 NOSIG RMK  12001KT/R03 MAX WND 02KT/R21 15007KT/NJL A2968(M)=  ",
+    "MetarTime": "2022-07-13_19:00:00",
+    "WindDirection": "180度",
+    "WindSpeed": "2浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "27度C",
+    "WeatherDescription": { "Zh_tw": "晴朗", "En": "Clear" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "TTT",
+    "StationID": "RCFN",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "臺東", "En": "Taitung" },
+    "AirportName": { "Zh_tw": "臺東機場", "En": "Taitung Airport" },
+    "StationPosition": {
+      "PositionLon": 121.093,
+      "PositionLat": 22.7567,
+      "GeoHash": "wsn17w9pr"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCFN 131400Z VRB02KT 9999 VCSH FEW018 BKN060 28/26 Q1008  NOSIG RMK A2979=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "風向不定",
+    "WindSpeed": "2浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "6000呎",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "鄰近有陣雨 ", "En": "VCSH " },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "KYD",
+    "StationID": "RCLY",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "蘭嶼", "En": "Lanyu" },
+    "AirportName": { "Zh_tw": "蘭嶼機場", "En": "Lanyu Airport" },
+    "StationPosition": {
+      "PositionLon": 121.527,
+      "PositionLat": 22.0294,
+      "GeoHash": "weymm6m68"
+    },
+    "ObservationTime": "2022-07-13T17:00:00+08:00",
+    "MetarText": "METAR RCLY 130900Z 11005G15KT 060V230 9999 FEW010 SCT015 BKN060  31/26 Q1005 NOSIG RMK VRB06G17KT/R13 A2969(V)=  ",
+    "MetarTime": "2022-07-13_17:00:00",
+    "WindDirection": "110度",
+    "WindSpeed": "5浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "6000呎",
+    "Temperature": "31度C",
+    "WeatherDescription": { "Zh_tw": "多雲時晴", "En": "Mostly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "TSA",
+    "StationID": "RCSS",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "臺北", "En": "Taipei" },
+    "AirportName": { "Zh_tw": "臺北松山國際機場", "En": "Songshan Airport" },
+    "StationPosition": {
+      "PositionLon": 121.552,
+      "PositionLat": 25.0696,
+      "GeoHash": "wsqqtgz3n"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCSS 131400Z 08006KT 050V130 9999 FEW020 BKN220 29/23 Q1005  NOSIG RMK A2970=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "080度",
+    "WindSpeed": "6浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "22000呎",
+    "Temperature": "29度C",
+    "WeatherDescription": { "Zh_tw": "多雲時晴", "En": "Mostly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "KNH",
+    "StationID": "RCBS",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "金門", "En": "Kinmen" },
+    "AirportName": { "Zh_tw": "金門機場", "En": "Kinmen Airport" },
+    "StationPosition": {
+      "PositionLon": 118.37,
+      "PositionLat": 24.43,
+      "GeoHash": "wsk4vx67h"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCBS 131400Z 22006KT 9999 FEW012 28/26 Q1006 NOSIG RMK  A2971(T)=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "220度",
+    "WindSpeed": "6浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "晴朗", "En": "Clear" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "HUN",
+    "StationID": "RCYU",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "花蓮", "En": "Hualien" },
+    "AirportName": { "Zh_tw": "花蓮機場", "En": "Hualien" },
+    "StationPosition": {
+      "PositionLon": 121.62,
+      "PositionLat": 24.03,
+      "GeoHash": "wsq2xw8bz"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCYU 131400Z 22002KT  9999    FEW014 SCT040 28/24 Q1008   RMK A2978=   ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "220度",
+    "WindSpeed": "2浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "晴時多雲", "En": "Partly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "TPE",
+    "StationID": "RCTP",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": {},
+    "AirportName": { "Zh_tw": "臺北桃園國際機場", "En": "Taoyuan" },
+    "StationPosition": {
+      "PositionLon": 121.232,
+      "PositionLat": 25.0802,
+      "GeoHash": "wsqnwtwqy"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCTP 131400Z 12004KT 070V160 9999 FEW015 SCT200 30/24 Q1005  NOSIG RMK A2969=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "120度",
+    "WindSpeed": "4浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "30度C",
+    "WeatherDescription": { "Zh_tw": "晴時多雲", "En": "Partly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "MFK",
+    "StationID": "RCMT",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "北竿", "En": "Beigan" },
+    "AirportName": { "Zh_tw": "馬祖北竿機場", "En": "Beigan Airport" },
+    "StationPosition": {
+      "PositionLon": 119.99,
+      "PositionLat": 26.23,
+      "GeoHash": "wstm4rn0c"
+    },
+    "ObservationTime": "2022-07-13T19:00:00+08:00",
+    "MetarText": "METAR RCMT 131100Z 20004KT 9999 FEW015 28/23 Q1005 NOSIG RMK  A2968(M)=  ",
+    "MetarTime": "2022-07-13_19:00:00",
+    "WindDirection": "200度",
+    "WindSpeed": "4浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "晴朗", "En": "Clear" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "TNN",
+    "StationID": "RCNN",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "臺南", "En": "Tainan" },
+    "AirportName": { "Zh_tw": "臺南機場", "En": "Tainan Airport" },
+    "StationPosition": {
+      "PositionLon": 120.2,
+      "PositionLat": 22.95,
+      "GeoHash": "wsj6x1yvr"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCNN 131400Z 36003KT  9999    FEW012 SCT025 27/24 Q1006   RMK A2972=   ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "360度",
+    "WindSpeed": "3浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "27度C",
+    "WeatherDescription": { "Zh_tw": "晴時多雲", "En": "Partly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "RMQ",
+    "StationID": "RCMQ",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "臺中", "En": "Taichung" },
+    "AirportName": {
+      "Zh_tw": "臺中國際機場",
+      "En": "Ching Chung Kang Airport"
+    },
+    "StationPosition": {
+      "PositionLon": 120.62,
+      "PositionLat": 24.27,
+      "GeoHash": "wsmf0f0yc"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCMQ 131400Z 32002KT  9999    FEW010 SCT100 27/24 Q1006   RMK A2973=   ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "320度",
+    "WindSpeed": "2浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "27度C",
+    "WeatherDescription": { "Zh_tw": "晴時多雲", "En": "Partly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "GNI",
+    "StationID": "RCGI",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "綠島", "En": "Lyudao" },
+    "AirportName": { "Zh_tw": "綠島機場", "En": "Lyudao Airport" },
+    "StationPosition": {
+      "PositionLon": 121.458,
+      "PositionLat": 22.6744,
+      "GeoHash": "wsn2gzepb"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCGI 131400Z 11006KT 030V170 8000 -SHRA SCT012 BKN016 BKN030  28/26 Q1008 NOSIG RMK A2977 RA AMT 0.2MM(O)=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "110度",
+    "WindSpeed": "6浬/時,陣風浬/時",
+    "Visibility": "8000公尺",
+    "Ceiling": "1600呎",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "小陣雨 ", "En": "-Shower " },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "MZG",
+    "StationID": "RCQC",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "澎湖", "En": "Penghu" },
+    "AirportName": { "Zh_tw": "澎湖", "En": "Penghu Airport" },
+    "StationPosition": {
+      "PositionLon": 119.62,
+      "PositionLat": 23.58,
+      "GeoHash": "wsjn4h8ek"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCQC 131400Z 16002KT  9999    FEW012 26/23 Q1005   RMK A2970=   ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "160度",
+    "WindSpeed": "2浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "無",
+    "Temperature": "26度C",
+    "WeatherDescription": { "Zh_tw": "晴朗", "En": "Clear" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "CYI",
+    "StationID": "RCKU",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": { "Zh_tw": "嘉義", "En": "Chaiyi" },
+    "AirportName": { "Zh_tw": "嘉義機場", "En": "Chaiyi Airport" },
+    "StationPosition": {
+      "PositionLon": 120.38,
+      "PositionLat": 23.47,
+      "GeoHash": "wsjte2d49"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCKU 131400Z 35001KT 9999 FEW012 SCT040 BKN100 28/23 Q1005 RMK A2970=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "350度",
+    "WindSpeed": "1浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "10000呎",
+    "Temperature": "28度C",
+    "WeatherDescription": { "Zh_tw": "多雲時晴", "En": "Mostly Cloudy" },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  },
+  {
+    "AirportID": "KHH",
+    "StationID": "RCKH",
+    "CountryName": { "Zh_tw": "臺灣", "En": "Taiwan" },
+    "CityName": {},
+    "AirportName": { "Zh_tw": "高雄小港國際機場", "En": "Kaohsiung" },
+    "StationPosition": {
+      "PositionLon": 120.351,
+      "PositionLat": 22.5754,
+      "GeoHash": "wsj86tszj"
+    },
+    "ObservationTime": "2022-07-13T22:00:00+08:00",
+    "MetarText": "METAR RCKH 131400Z 08004KT 9999 -DZ FEW012 BKN022 BKN040 29/27  Q1006 NOSIG RMK A2971=  ",
+    "MetarTime": "2022-07-13_22:00:00",
+    "WindDirection": "080度",
+    "WindSpeed": "4浬/時,陣風浬/時",
+    "Visibility": "10公里以上",
+    "Ceiling": "2200呎",
+    "Temperature": "29度C",
+    "WeatherDescription": { "Zh_tw": "小毛雨 ", "En": "-Drizzle " },
+    "UpdateTime": "2022-07-13T22:18:06+08:00"
+  }
+]
