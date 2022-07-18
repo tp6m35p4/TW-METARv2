@@ -15,11 +15,10 @@ defineProps({
         <li v-for="(airport, key) in airports.data" class="nav-item" :key="key">
           <router-link
             class="nav-link btn btn-link"
-            :class="{ active: id == key }"
             aria-current="page"
             :to="{ name: 'home', params: { id: key } }"
           >
-            <span data-feather="home" class="align-text-bottom"></span>
+            <!-- <span data-feather="home" class="align-text-bottom"></span> -->
             {{ key }} / {{ airport.AirportName.Zh_tw }}
           </router-link>
         </li>

@@ -48,9 +48,9 @@ import { useNotam } from "../stores/selected";
 import { parse } from "../helpers/notamParser";
 import NotamAccordion from "./NotamAccordion.vue";
 import { notamCode } from "../stores/notamCode";
+import { windyNotamUrl } from "../stores/url";
 const props = defineProps(["id", "airports"]);
 // const route = useRoute();
-const windyUrl = "https://node.windy.com/airports/notams";
 const selectedNotamType = 0;
 const airport = computed(() => {
   return props.airports.data[props.id];
@@ -75,7 +75,7 @@ const notam = computed(() => {
 });
 
 function loadNotam() {
-  fetch(`${windyUrl}/${props.id}`)
+  fetch(`${windyNotamUrl}/${props.id}`)
     // fetch("notam_RCTP.json")
     .then((res) => {
       if (res.ok) {

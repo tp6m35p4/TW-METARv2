@@ -18,5 +18,8 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "vite": "^2.9.9"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "files": [
+    "docs/*"
+  ]
 }

@@ -5,6 +5,7 @@ import Home from "./components/Home.vue";
 import NavbarVue from "./components/Navbar.vue";
 import Sidebar from "./components/Sidebar.vue";
 import { onMounted, reactive, ref, computed } from "vue";
+import { metarUrl } from "./stores/url";
 
 const airportList = [
   "RCFN",
@@ -37,10 +38,7 @@ function getAirportDataById(id, data) {
 }
 
 onMounted(() => {
-  fetch(
-    "https://ptx.transportdata.tw/MOTC/v2/Air/METAR/Airport?$top=30&$format=JSON"
-    // "data.json"
-  )
+  fetch(metarUrl)
     .then((res) => {
       if (res.ok) {
         return res.json();

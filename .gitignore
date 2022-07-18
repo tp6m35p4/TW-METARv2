@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# yarn v2
+# yarn v3
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 .yarn/*
 !.yarn/cache
