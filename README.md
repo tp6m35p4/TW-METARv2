@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# TW Metar
+提供台灣各機場天氣資訊（Metar）與NOTAM。
+遇到看不懂的嗎？參考[這篇文章](https://blog.yzchen.tw/posts/metar/)來幫助你解讀吧！
+## Feature
+* 讓手機用戶也能快速簡單的查詢機場天氣
+* 可以一鍵複製
+* NOTAM分類
+* 一目了然的NOTAM內容
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## To-do
+[] TAF
+[] NOTAM Text
