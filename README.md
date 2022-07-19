@@ -8,5 +8,5 @@
 * 一目了然的NOTAM內容
 
 ## To-do
-[] TAF
-[] NOTAM Text
+ - [ ] TAF
+ - [ ] NOTAM Text
