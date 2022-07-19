@@ -1,0 +1,33 @@
+<template>
+  <div class="card m-4">
+    <div class="card-body">
+      <div class="d-flex flex-row align-items-center card-title">
+        <h5 class="my-auto flex-grow-1">
+          {{ metar["StationID"] }} /
+          {{ metar["AirportName"]["Zh_tw"] }}
+          <!-- {{ airport }} -->
+        </h5>
+        <button
+          class="btn btn-sm btn-outline-secondary copy-metar"
+          :data-clipboard-target="`#${metar['StationID']}-metar-text`"
+        >
+          Copy
+        </button>
+      </div>
+
+      <p class="card-text" :id="`${metar['StationID']}-metar-text`">
+        <!-- {{ airport.data.MetarText }} -->
+        {{ metar["MetarText"] }}
+      </p>
+      <!-- <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { computed } from "vue";
+const props = defineProps(["metar"]);
+</script>
+
+<style lang="scss" scoped></style>

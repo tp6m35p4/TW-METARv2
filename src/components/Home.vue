@@ -1,19 +1,5 @@
 <template>
-  <div class="card m-4">
-    <div class="card-body">
-      <h5 class="card-title">
-        {{ id }} /
-        {{ airport["AirportName"]["Zh_tw"] }}
-        <!-- {{ airport }} -->
-      </h5>
-      <p class="card-text">
-        <!-- {{ airport.data.MetarText }} -->
-        {{ airport["MetarText"] }}
-      </p>
-      <!-- <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a> -->
-    </div>
-  </div>
+  <MetarCard :metar="metar" />
   <div class="card m-4">
     <div class="card-header d-flex justify-content-between">
       <ul class="nav nav-tabs card-header-tabs">
@@ -42,17 +28,19 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import { useRoute } from "vue-router";
-import { computed, watch } from "vue";
+import { computed, watch, onMounted } from "vue";
 import NotamNavItem from "./NotamNavItem.vue";
 import { useNotam } from "../stores/selected";
 import { parse } from "../helpers/notamParser";
 import NotamAccordion from "./NotamAccordion.vue";
 import { notamCode } from "../stores/notamCode";
 import { windyNotamUrl } from "../stores/url";
+import MetarCard from "./MetarCard.vue";
+import ClipboardJS from "clipboard";
 const props = defineProps(["id", "airports"]);
 // const route = useRoute();
 const selectedNotamType = 0;
-const airport = computed(() => {
+const metar = computed(() => {
   return props.airports.data[props.id];
 });
 const notams = reactive({
@@ -107,4 +95,7 @@ function loadNotam() {
       alert("Windy API error");
     });
 }
+onMounted(() => {
+  new ClipboardJS(".btn.copy-metar");
+});
 </script>
