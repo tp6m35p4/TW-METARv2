@@ -12,9 +12,9 @@
 </template>
 
 <script setup>
-import { useNotam } from "../stores/selected";
+import { useNotam } from '../stores/selected';
 
-defineProps(["text", "type"]);
+defineProps(['text', 'type']);
 const notam = useNotam();
 </script>
 

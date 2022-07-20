@@ -10,26 +10,26 @@
           aria-expanded="true"
           :aria-controls="`panelsStayOpen-collapse-${k}`"
         >
-          {{ i["parsed"]["type"][0] }}
+          {{ i['parsed']['type'][0] }}
           <span
             class="badge"
             :class="notamCode['type'][i['parsed']['type'][1]][1]"
-            >{{ notamCode["type"][i["parsed"]["type"][1]][0] }}</span
+            >{{ notamCode['type'][i['parsed']['type'][1]][0] }}</span
           >
           <span
             class="badge"
             :class="notamCode['validity'][i['validity']][1]"
-            >{{ notamCode["validity"][i["validity"]][0] }}</span
+            >{{ notamCode['validity'][i['validity']][0] }}</span
           >
           <span
             class="badge bg-secondary d-flex flex-wrap"
             v-if="notamCode['code23'][i['parsed']['code23']]"
-            >{{ notamCode["code23"][i["parsed"]["code23"]][0] }}</span
+            >{{ notamCode['code23'][i['parsed']['code23']][0] }}</span
           >
           <span
             class="badge bg-secondary d-flex flex-wrap"
             v-if="notamCode['code45'][i['parsed']['code45']]"
-            >{{ notamCode["code45"][i["parsed"]["code45"]][0] }}</span
+            >{{ notamCode['code45'][i['parsed']['code45']][0] }}</span
           >
         </button>
       </h2>
@@ -39,7 +39,7 @@
         :aria-labelledby="`panelsStayOpen-heading-${k}`"
       >
         <div class="accordion-body">
-          {{ i["raw"] }}
+          {{ i['raw'] }}
         </div>
       </div>
     </div>
@@ -47,8 +47,8 @@
 </template>
 
 <script setup>
-import { notamCode } from "../stores/notamCode";
-defineProps(["notams"]);
+import { notamCode } from '../stores/notamCode';
+defineProps(['notams']);
 </script>
 
 <style lang="scss" scoped></style>

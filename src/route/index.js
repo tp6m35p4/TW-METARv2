@@ -1,16 +1,16 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../components/Home.vue";
-import Airport from "../components/Airport.vue";
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '../components/Home.vue';
+import Airport from '../components/Airport.vue';
 const routes = [
   {
-    path: "/:id",
-    name: "home",
+    path: '/:id',
+    name: 'home',
     component: Airport,
     props: true,
   },
   {
-    path: "/",
-    name: "index",
+    path: '/',
+    name: 'index',
     component: Home,
     props: true,
   },
@@ -19,5 +19,5 @@ const routes = [
 export default createRouter({
   history: createWebHashHistory(),
   routes,
-  linkActiveClass: "active",
+  linkActiveClass: 'active',
 });

@@ -1,32 +1,32 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Home from "./components/Home.vue";
-import NavbarVue from "./components/Navbar.vue";
-import Sidebar from "./components/Sidebar.vue";
-import { onMounted, reactive, ref, computed } from "vue";
-import { metarUrl } from "./stores/url";
+import Home from './components/Home.vue';
+import NavbarVue from './components/Navbar.vue';
+import Sidebar from './components/Sidebar.vue';
+import { onMounted, reactive, ref, computed } from 'vue';
+import { metarUrl } from './stores/url';
 
 const airportList = [
-  "RCFN",
-  "RCTP",
-  "RCKH",
-  "RCSS",
-  "RCBS",
-  "RCKU",
-  "RCMQ",
-  "RCMT",
-  "RCNN",
-  "RCQC",
-  "RCYU",
-  "RCCM",
-  "RCFG",
-  "RCGI",
-  "RCKW",
-  "RCLY",
-  "RCWA",
-  "RCSP",
-  "RCDC",
+  'RCFN',
+  'RCTP',
+  'RCKH',
+  'RCSS',
+  'RCBS',
+  'RCKU',
+  'RCMQ',
+  'RCMT',
+  'RCNN',
+  'RCQC',
+  'RCYU',
+  'RCCM',
+  'RCFG',
+  'RCGI',
+  'RCKW',
+  'RCLY',
+  'RCWA',
+  'RCSP',
+  'RCDC',
 ];
 const airports = reactive({
   data: {},
@@ -43,7 +43,7 @@ onMounted(() => {
       if (res.ok) {
         return res.json();
       }
-      throw new Error("Get data error");
+      throw new Error('Get data error');
     })
     .then((data) => {
       for (let i in airportList) {
@@ -55,7 +55,7 @@ onMounted(() => {
     })
     .catch((err) => {
       console.log(err);
-      alert("API error");
+      alert('API error');
     });
 });
 </script>

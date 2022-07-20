@@ -26,8 +26,12 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-const props = defineProps({ metar: Object });
+defineProps({
+  metar: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <style lang="scss" scoped></style>
