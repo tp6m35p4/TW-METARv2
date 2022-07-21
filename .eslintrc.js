@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   env: {
     browser: true,
@@ -22,4 +23,4 @@ module.exports = {
     withDefaults: 'readonly',
   },
   rules: {},
-}
+};

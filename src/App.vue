@@ -1,12 +1,15 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Home from './components/Home.vue';
 import NavbarVue from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
-import { onMounted, reactive, ref, computed } from 'vue';
+import { onMounted, reactive } from 'vue';
 import { metarUrl } from './stores/url';
-
+import { useAxios } from '@vueuse/integrations/useAxios';
+import { useFetchAirportMetarInit } from './composables/useFetchAirportData';
+onMounted(async () => {
+  await useFetchAirportMetarInit();
+});
 const airportList = [
   'RCFN',
   'RCTP',
@@ -32,42 +35,54 @@ const airports = reactive({
   data: {},
 });
 
-function getAirportDataById(id, data) {
-  let fData = data.filter((airport) => airport.StationID == id);
-  return fData.length > 0 ? fData[0] : undefined;
-}
+// function getAirportDataById(id, d) {
+//   let fData = d.filter((airport) => airport.StationID == id);
+//   return fData.length > 0 ? fData[0] : undefined;
+// }
 
-onMounted(() => {
-  fetch(metarUrl)
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      throw new Error('Get data error');
-    })
-    .then((data) => {
-      for (let i in airportList) {
-        let d = getAirportDataById(airportList[i], data);
-        if (d) {
-          airports.data[airportList[i]] = d;
-        }
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      alert('API error');
-    });
-});
+// onMounted(async () => {
+//   const { data, isFinished } = await useAxios(metarUrl);
+//   console.log(data);
+//   if (isFinished) {
+//     for (let i in airportList) {
+//       let d = getAirportDataById(airportList[i], data.value);
+//       if (d) {
+//         airports.data[airportList[i]] = d;
+//       }
+//     }
+//   }
+// });
+// onMounted(async () => {
+//   fetch(metarUrl)
+//     .then((res) => {
+//       if (res.ok) {
+//         return res.json();
+//       }
+//       throw new Error('Get data error');
+//     })
+//     .then((data) => {
+//       for (let i in airportList) {
+//         let d = getAirportDataById(airportList[i], data);
+//         if (d) {
+//           airports.data[airportList[i]] = d;
+//         }
+//       }
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       alert('API error');
+//     });
+// });
 </script>
 
 <template>
   <NavbarVue />
   <div class="container-fuild">
     <div class="row">
-      <Sidebar :airports="airports" />
+      <Sidebar />
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <!-- <Home :airport="selectedAirport" /> -->
-        <router-view :airports="airports"></router-view>
+        <router-view></router-view>
       </main>
     </div>
   </div>

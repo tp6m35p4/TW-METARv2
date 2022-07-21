@@ -11,7 +11,12 @@
           :key="k"
         />
       </ul>
-      <button @click="loadNotam" class="btn btn-secondary btn-sm">Load</button>
+      <button
+        class="btn btn-secondary btn-sm"
+        @click="useFetchAirportNotam(id)"
+      >
+        Load
+      </button>
     </div>
     <div class="card-body">
       <h5 class="card-title">
@@ -27,36 +32,31 @@
 </template>
 
 <script setup>
-import { reactive } from '@vue/reactivity';
-import { useRoute } from 'vue-router';
-import { computed, watch, onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import NotamNavItem from './NotamNavItem.vue';
 import { useNotam } from '../stores/selected';
-import { parse } from '../helpers/notamParser';
 import NotamAccordion from './NotamAccordion.vue';
 import { notamCode } from '../stores/notamCode';
-import { windyNotamUrl } from '../stores/url';
 import MetarCard from './MetarCard.vue';
 import ClipboardJS from 'clipboard';
 import TafCard from './TafCard.vue';
-const props = defineProps(['id', 'airports']);
+import { useAirportsData } from '../stores/airports';
+import { useFetchAirportNotam } from '../composables/useFetchAirportData';
+const props = defineProps(['id']);
 // const route = useRoute();
-const selectedNotamType = 0;
+const airportsData = useAirportsData();
+airportsData.checkExpired(props.id);
 const metar = computed(() => {
-  return props.airports.data[props.id];
-});
-const notams = reactive({
-  data: {},
+  return airportsData[props.id]['metar'];
 });
 
 const notamStore = useNotam();
-
 const notam = computed(() => {
-  if (notams.data[props.id] != undefined) {
+  if (airportsData[props.id]['notam'] != undefined) {
     if (notamStore.selectdState == 2) {
-      return notams.data[props.id];
+      return airportsData[props.id]['notam'];
     } else {
-      return notams.data[props.id].filter((e) => {
+      return airportsData[props.id]['notam'].filter((e) => {
         return e['validity'] == notamStore.selectdState;
       });
     }
@@ -64,39 +64,6 @@ const notam = computed(() => {
   return [];
 });
 
-function loadNotam() {
-  fetch(`${windyNotamUrl}/${props.id}`)
-    // fetch("notam_RCTP.json")
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      throw new Error('Get data error');
-    })
-    .then((data) => {
-      notams.data[props.id] = [];
-      data.forEach((e) => {
-        let fromTo = e['fromTo'].split('-');
-        let from = fromTo[0];
-        let to = fromTo[1];
-        let n = parse(e['raw']);
-        notams.data[props.id].push({
-          id: e['id'],
-          validity: e['validity'],
-          validityStr: e['validityStr'],
-          from,
-          to,
-          raw: e['raw'],
-          body: e['body'],
-          parsed: n,
-        });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      alert('Windy API error');
-    });
-}
 onMounted(() => {
   new ClipboardJS('.btn.copy-metar');
 });

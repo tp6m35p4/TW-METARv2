@@ -3,21 +3,21 @@
     <div class="card-body">
       <div class="d-flex flex-row align-items-center card-title">
         <h5 class="my-auto flex-grow-1">
-          {{ metar.StationID }} /
-          {{ metar.AirportName.Zh_tw }}
+          {{ metar?.StationID }} /
+          {{ metar?.AirportName?.Zh_tw }}
           <!-- {{ airport }} -->
         </h5>
         <button
           class="btn btn-sm btn-outline-secondary copy-metar"
-          :data-clipboard-target="`#${metar.StationID}-metar-text`"
+          :data-clipboard-target="`#${metar?.StationID}-metar-text`"
         >
           Copy
         </button>
       </div>
 
-      <p class="card-text" :id="`${metar.StationID}-metar-text`">
+      <p :id="`${metar?.StationID}-metar-text`" class="card-text">
         <!-- {{ airport.data.MetarText }} -->
-        {{ metar.MetarText }}
+        {{ metar?.MetarText }}
       </p>
       <!-- <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a> -->

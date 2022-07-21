@@ -1,8 +1,12 @@
 <script setup>
+import { useAirportsData } from '../stores/airports';
+
 defineProps({
-  airports: Object,
+  // airports: Object,
   id: String,
 });
+const airportsData = useAirportsData();
+console.log(airportsData);
 </script>
 
 <template>
@@ -12,14 +16,18 @@ defineProps({
   >
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
-        <li v-for="(airport, key) in airports.data" class="nav-item" :key="key">
+        <li
+          v-for="(airport, key) in airportsData.$state"
+          class="nav-item"
+          :key="key"
+        >
           <router-link
             class="nav-link btn btn-link"
             aria-current="page"
             :to="{ name: 'home', params: { id: key } }"
           >
             <!-- <span data-feather="home" class="align-text-bottom"></span> -->
-            {{ key }} / {{ airport.AirportName.Zh_tw }}
+            {{ key }} / {{ airport?.AirportName?.Zh_tw }}
           </router-link>
         </li>
       </ul>
