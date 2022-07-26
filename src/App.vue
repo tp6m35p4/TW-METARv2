@@ -4,9 +4,7 @@
 import NavbarVue from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
 import { onMounted, reactive } from 'vue';
-import { metarUrl } from './stores/url';
-import { useAxios } from '@vueuse/integrations/useAxios';
-import { useFetchAirportMetarInit } from './composables/useFetchAirportData';
+import { useFetchAirportMetarInit } from './composables/fetchAirportData';
 onMounted(async () => {
   await useFetchAirportMetarInit();
 });
@@ -31,9 +29,6 @@ const airportList = [
   'RCSP',
   'RCDC',
 ];
-const airports = reactive({
-  data: {},
-});
 
 // function getAirportDataById(id, d) {
 //   let fData = d.filter((airport) => airport.StationID == id);

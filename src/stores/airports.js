@@ -30,4 +30,12 @@ export const useAirportsData = defineStore('airportsDataStore', {
   actions: {
     checkExpired() {},
   },
+  persist: {
+    enabled: true,
+    strategies: [
+      {
+        storage: localStorage,
+      },
+    ],
+  },
 });

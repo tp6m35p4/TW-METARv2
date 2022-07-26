@@ -1,21 +1,27 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
-import { metarUrl, windyNotamUrl } from '../stores/url';
+import { metarUrl, tafUrl, windyNotamUrl } from '../stores/url';
 import { useAirportsData } from '../stores/airports';
 import { parse } from '../helpers/notamParser';
 function getAirportDataById(id, d) {
   let fData = d.filter((airport) => airport.StationID == id);
   return fData.length > 0 ? fData[0] : undefined;
 }
+
 export const useFetchAirportMetar = async (airportId) => {
-  const { data, isFinished } = await useAxios(metarUrl);
-  console.log(data);
+  console.log(airportId);
+  const airportsData = useAirportsData();
+  let iataId = airportsData[airportId]['IATA'];
+  const { data, isFinished } = await useAxios(`${metarUrl}/${iataId}`, {
+    params: {
+      top: 30,
+      format: 'JSON',
+    },
+  });
   if (isFinished) {
-    for (let i in airportList) {
-      let d = getAirportDataById(airportList[i], data.value);
-      if (d) {
-        airports.data[airportList[i]] = d;
-      }
-    }
+    airportsData[airportId]['metar'] = {
+      data: data.value[0],
+      updatedAt: Date.now(),
+    };
   }
 };
 export const useFetchAirportMetarCache = async (airportId) => {
@@ -24,15 +30,23 @@ export const useFetchAirportMetarCache = async (airportId) => {
 
 export const useFetchAirportMetarInit = async () => {
   const airportsData = useAirportsData();
-  const { data, isFinished } = await useAxios(metarUrl);
+  const { data, isFinished } = await useAxios(metarUrl, {
+    params: {
+      top: 30,
+      format: 'JSON',
+    },
+  });
   if (isFinished) {
     for (let i in airportsData.$state) {
       let d = getAirportDataById(i, data.value);
       if (d) {
         airportsData[i]['IATA'] = d['AirportID'];
         airportsData[i]['AirportName'] = d['AirportName'];
-        airportsData[i]['metar'] = d;
-        airportsData[i]['checkTime'] = Date.now().toString();
+        airportsData[i]['metar'] = {
+          data: d,
+          updatedAt: Date.now(),
+        };
+        airportsData[i]['checkTime'] = Date.now();
       }
     }
   }
@@ -42,13 +56,16 @@ export const useFetchAirportNotam = async (airportId) => {
 
   const { data, isFinished } = await useAxios(`${windyNotamUrl}/${airportId}`);
   if (isFinished) {
-    airportsData[airportId]['notam'] = [];
+    airportsData[airportId]['notam'] = {
+      data: [],
+      updatedAt: Date.now(),
+    };
     data.value.forEach((e) => {
       let fromTo = e['fromTo'].split('-');
       let from = fromTo[0];
       let to = fromTo[1];
       let n = parse(e['raw']);
-      airportsData[airportId]['notam'].push({
+      airportsData[airportId]['notam']['data'].push({
         id: e['id'],
         validity: e['validity'],
         validityStr: e['validityStr'],
@@ -59,5 +76,18 @@ export const useFetchAirportNotam = async (airportId) => {
         parsed: n,
       });
     });
+  }
+};
+
+export const useFetchAirportTaf = async (airportId) => {
+  const airportsData = useAirportsData();
+
+  const { data, isFinished } = await useAxios(tafUrl, {
+    params: {
+      stationString: airportId,
+    },
+  });
+  if (isFinished) {
+    airportsData[airportId]['taf'] = data;
   }
 };

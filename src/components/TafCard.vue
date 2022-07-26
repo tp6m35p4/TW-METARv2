@@ -4,6 +4,12 @@
       <div class="d-flex flex-row align-items-center card-title">
         <h5 class="my-auto flex-grow-1">TAF</h5>
         <button
+          class="btn btn-secondary btn-sm"
+          @click="useFetchAirportTaf(id)"
+        >
+          Load
+        </button>
+        <button
           class="btn btn-sm btn-outline-secondary copy-metar"
           :data-clipboard-target="`#${id}-taf-text`"
         >
@@ -19,9 +25,12 @@
 </template>
 
 <script setup>
+import { useFetchAirportTaf } from '../composables/fetchAirportData';
+
 defineProps({
-  id: String,
+  id: { type: String, default: '' },
 });
+useFetchAirportTaf;
 </script>
 
 <style lang="scss" scoped></style>
