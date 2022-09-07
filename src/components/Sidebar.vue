@@ -6,7 +6,6 @@ defineProps({
   id: String,
 });
 const airportsData = useAirportsData();
-console.log(airportsData);
 </script>
 
 <template>
@@ -18,8 +17,8 @@ console.log(airportsData);
       <ul class="nav flex-column">
         <li
           v-for="(airport, key) in airportsData.$state"
-          class="nav-item"
           :key="key"
+          class="nav-item"
         >
           <router-link
             class="nav-link btn btn-link"

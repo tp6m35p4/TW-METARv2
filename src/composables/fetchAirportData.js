@@ -24,9 +24,9 @@ export const useFetchAirportMetar = async (airportId) => {
     };
   }
 };
-export const useFetchAirportMetarCache = async (airportId) => {
-  const { data } = await useFetchAirportMetar(airportId);
-};
+// export const useFetchAirportMetarCache = async (airportId) => {
+//   const { data } = await useFetchAirportMetar(airportId);
+// };
 
 export const useFetchAirportMetarInit = async () => {
   const airportsData = useAirportsData();

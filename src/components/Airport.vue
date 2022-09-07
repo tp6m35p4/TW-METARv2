@@ -39,12 +39,14 @@ import NotamAccordion from './NotamAccordion.vue';
 import { notamCode } from '../stores/notamCode';
 import MetarCard from './MetarCard.vue';
 import ClipboardJS from 'clipboard';
-import TafCard from './TafCard.vue';
+// import TafCard from './TafCard.vue';
 import { useAirportsData } from '../stores/airports';
 import { useFetchAirportNotam } from '../composables/fetchAirportData';
 import { useRefreshNotam } from '../composables/refreshAirportData';
 import { useRoute } from 'vue-router';
-const props = defineProps(['id']);
+const props = defineProps({
+  id: String,
+});
 
 const route = useRoute();
 const airportsData = useAirportsData();
